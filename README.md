@@ -1,50 +1,45 @@
-# Welcome to your Expo app 👋
+## 주요 명령어
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
-
-## Get started
-
-1. Install dependencies
+1. 의존성 설치
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. 프로젝트 시작
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+3. 안드로이드/ios 시뮬레이터 연결
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   ```bash
+    i # ios
+    a # 안드로이드
+   ```
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 커밋 컨벤션
 
-## Get a fresh project
+| 타입         | 설명                                            |
+| :----------- | :---------------------------------------------- |
+| **Feat**     | 새로운 기능을 추가한 경우                       |
+| **Fix**      | 에러를 수정한 경우 (급한 에러 수정도 포함)      |
+| **Design**   | CSS 등 UI 디자인을 변경한 경우                  |
+| **Style**    | 코드 포맷 변경/세미콜론 추가 등, 로직 수정 없음 |
+| **Refactor** | 코드를 리팩토링한 경우                          |
+| **Comment**  | 주석을 추가하거나 변경한 경우                   |
+| **Docs**     | 문서를 수정한 경우                              |
+| **Test**     | 테스트 코드를 추가/변경/리팩토링한 경우         |
+| **Chore**    | 자잘한 수정                                     |
+| **Rename**   | 파일/폴더명 수정 또는 이동                      |
+| **Remove**   | 파일을 삭제하는 작업만 수행한 경우              |
+| **Build**    | 라이브러리 설치, 빌드 업데이트                  |
+| **CI**       | CI 설정 파일 수정                               |
 
-When you're ready, run:
+## 주의사항
 
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1. PR 템플릿 준수
+2. `.env` 파일 꼭 `.gitignore`에 추가하기
+3. 커밋 컨벤션 준수
+   - 짜잘한 수정을 했을 때 `git add {파일}`로 `Chore`와 함께 따로 커밋하기
