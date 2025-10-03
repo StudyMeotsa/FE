@@ -1,11 +1,12 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 function index() {
   return (
-    <View>
+    <SafeAreaView>
       <Text>타이머 페이지</Text>
-    </View>
+    </SafeAreaView>
   );
 }
 
