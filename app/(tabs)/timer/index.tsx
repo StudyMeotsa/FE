@@ -1,10 +1,13 @@
+import React from "react";
 import { Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function HomeScreen() {
+function index() {
   return (
     <SafeAreaView>
-      <Text>초기 세팅</Text>;
+      <Text>타이머 페이지</Text>
     </SafeAreaView>
   );
 }
+
+export default index;
