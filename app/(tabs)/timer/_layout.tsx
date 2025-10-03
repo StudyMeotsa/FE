@@ -1,13 +1,10 @@
 import { Stack } from "expo-router";
 
-export default function MyLayout() {
+export default function TimerLayout() {
   return (
-    <Stack
-      screenOptions={{
-        headerShown: false,
-      }}>
+    <Stack>
       <Stack.Screen
-        name='index'
+        name='timer'
         options={{
           headerShown: false,
         }}
