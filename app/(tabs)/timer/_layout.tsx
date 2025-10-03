@@ -4,7 +4,7 @@ export default function TimerLayout() {
   return (
     <Stack>
       <Stack.Screen
-        name='timer'
+        name='index'
         options={{
           headerShown: false,
         }}
