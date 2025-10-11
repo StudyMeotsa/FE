@@ -1,10 +1,14 @@
 import { StyleSheet, Text, View, Button, Dimensions, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useNavigation } from "@react-navigation/native";
 import Svg, { Path } from 'react-native-svg';  // 상단 background 배경 svg
 
 const { width } = Dimensions.get("window"); // 화면의 width 함수 정의
 
 export default function HomeScreen() {
+
+  const navigation = useNavigation();
+
   return (
     <SafeAreaView>
       <View style={styles.topBackground}>
@@ -12,6 +16,7 @@ export default function HomeScreen() {
         <Text style = {styles.textIntro}>김멋사님,</Text>
         <Text style = {styles.textIntro2}>안녕하세요!</Text>
         <Text style = {styles.textIntro3}>바로 시작해볼까요?</Text>
+        
         <TouchableOpacity
           style={styles.startButton}
           onPress={() => console.log("start")}
@@ -22,7 +27,10 @@ export default function HomeScreen() {
 
       <Text style = {styles.textStudy}>예정된 스터디</Text>
     
-      <View style={styles.subjectcontainers}>
+      <TouchableOpacity 
+        style={styles.subjectcontainers}
+        onPress={() => alert('공부 과목 버튼 클릭!')} // navigation.navigate("위치")
+      >
         {/* <View style={styles.circle}></View> */}
         <View style={styles.subjectcontainer}>
           <View style={styles.textWrapper}>
@@ -35,9 +43,12 @@ export default function HomeScreen() {
             <View style={styles.circleImage}></View>
           </View>
         </View>
-      </View>
+      </TouchableOpacity>
 
-      <View style={styles.subjectcontainers}>
+      <TouchableOpacity 
+        style={styles.subjectcontainers}
+        onPress={() => alert('공부 과목 버튼 클릭!')} // navigation.navigate("위치")
+      >
         {/* <View style={styles.circle}></View> */}
         <View style={styles.subjectcontainer}>
           <View style={styles.textWrapper}>
@@ -50,8 +61,7 @@ export default function HomeScreen() {
             <View style={styles.circleImage}></View>
           </View>
         </View>
-      </View>
-
+      </TouchableOpacity>
     </SafeAreaView>
   );
 }
@@ -66,7 +76,7 @@ const styles = StyleSheet.create({
   leftCurveBackground: {
     width: 250,
     height: 330,
-    backgroundColor: '#868686', // 회색 배경
+    backgroundColor: '#AC7349', // 회색 배경
          
   },
   textIntro: {
@@ -91,7 +101,7 @@ const styles = StyleSheet.create({
     paddingLeft: 30,
   },
   startButton: {
-    backgroundColor: '#C67C4E',
+    backgroundColor: '#c98b64ff',
     width:150,
     height: 40,
     paddingVertical: 10,
@@ -169,9 +179,8 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     borderRadius: 200,
-    backgroundColor: '#C4C4C4',
+    backgroundColor: '#D1C1B6',
     borderWidth: 2,
-    borderColor: '#C4C4C4',
-    
+    borderColor: '#A47864',
   },
 });
