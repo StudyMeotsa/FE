@@ -1,9 +1,9 @@
-import { StyleSheet, Text, View, Button, Dimensions, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, Button, Dimensions, TouchableOpacity, Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
-import Svg, { Path } from 'react-native-svg';  // 상단 background 배경 svg
-
-const { width } = Dimensions.get("window"); // 화면의 width 함수 정의
+import Man from '../../assets/images/man.png';
+import Latte from '../../assets/images/Latte.png';
+import Lamp from '../../assets/images/lamp.png';
 
 export default function HomeScreen() {
 
@@ -12,14 +12,17 @@ export default function HomeScreen() {
   return (
     <SafeAreaView>
       <View style={styles.topBackground}>
-        <View style={styles.leftCurveBackground} />
+        <Image source={Lamp} style={styles.lampImage}/>
+        
         <Text style = {styles.textIntro}>김멋사님,</Text>
         <Text style = {styles.textIntro2}>안녕하세요!</Text>
         <Text style = {styles.textIntro3}>바로 시작해볼까요?</Text>
         
+        <Image source={Man} style={styles.manIamge}/>
+
         <TouchableOpacity
           style={styles.startButton}
-          onPress={() => console.log("start")}
+          onPress={() => alert('START')} // navigation.navigate("위치")
         >
           <Text style={styles.startButtonText}>공부 시작하기 →</Text>
         </TouchableOpacity>
@@ -36,11 +39,10 @@ export default function HomeScreen() {
           <View style={styles.textWrapper}>
             <Text style = {styles.studydate}>9월 00일 화요일</Text>
             <Text style = {styles.studyclock}>6:00 PM</Text>
-            <Text style = {styles.studytitle}>공부 과목</Text>
             <Text style = {styles.studysubject}>알고리즘</Text>
           </View>
           <View style={styles.circleWrapper}>
-            <View style={styles.circleImage}></View>
+            <Image source={Latte} style={styles.latteImage}/>
           </View>
         </View>
       </TouchableOpacity>
@@ -54,11 +56,10 @@ export default function HomeScreen() {
           <View style={styles.textWrapper}>
             <Text style = {styles.studydate}>9월 00일 화요일</Text>
             <Text style = {styles.studyclock}>6:00 PM</Text>
-            <Text style = {styles.studytitle}>공부 과목</Text>
             <Text style = {styles.studysubject}>컴퓨터 구조</Text>
           </View>
           <View style={styles.circleWrapper}>
-            <View style={styles.circleImage}></View>
+            <Image source={Latte} style={styles.latteImage}/>
           </View>
         </View>
       </TouchableOpacity>
@@ -70,14 +71,18 @@ const styles = StyleSheet.create({
   topBackground: {
     width: "100%",
     height: 330,
-    backgroundColor: "#EDEDED",
+    backgroundColor: "#A67247",
     overflow: 'hidden', // 자식 요소가 이 뷰 밖으로 나가지 않도록
   },
-  leftCurveBackground: {
-    width: 250,
-    height: 330,
-    backgroundColor: '#AC7349', // 회색 배경
-         
+  lampImage: {
+    width: 110,
+    height: 145,
+    marginLeft: 50,
+  },
+  manIamge: {
+    width: 220,
+    height: 260,
+    marginLeft: 170,
   },
   textIntro: {
     color: '#ffffff',
@@ -152,35 +157,28 @@ const styles = StyleSheet.create({
   },
   studydate: {
     width: 130,
-    fontSize: 12,
+    fontSize: 14,
+    fontWeight: '500',
     color: '#72777A',
   },
   studyclock: {
     width: 130,
-    fontSize: 12,
-    color: '#72777A',
-  },
-  studytitle: {
-    width: 130,
-    fontSize: 12,
-    marginTop: 15,
-    color: '#090A0A',
+    fontSize: 20,
+    fontWeight: '600',
+    color: '#3d3d3d',
   },
   studysubject: {
     width:130,
-    fontSize: 18,
+    fontSize: 20,
     marginTop: 10,
+    fontWeight: '700',
     color: '#3D3D3D',
   },
   circleWrapper: {
     marginLeft: 10,
   },
-  circleImage: {
+  latteImage: {
     width: 100,
-    height: 100,
-    borderRadius: 200,
-    backgroundColor: '#D1C1B6',
-    borderWidth: 2,
-    borderColor: '#A47864',
+    height: 110,
   },
 });
