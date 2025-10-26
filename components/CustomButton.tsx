@@ -3,7 +3,7 @@ import { Pressable, StyleSheet, Text } from 'react-native';
 
 interface CustomButtonProps {
   label: string;
-  size?: "medium" | "small";
+  size?: "large" | "medium" | "small";
   color?: "white" | "brown"
 }
 
@@ -33,6 +33,11 @@ const styles = StyleSheet.create({
     width: 160,
     height: 60
   },
+  large: {
+    width: 327,
+    height: 56,
+    borderRadius: 16,
+  },
   white: {
     backgroundColor: "white",
     borderWidth: 2,
@@ -55,7 +60,7 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
   },
   pressed: {
-    backgroundColor: 'pink'
+    opacity: 0.8,
   }
 });
 
