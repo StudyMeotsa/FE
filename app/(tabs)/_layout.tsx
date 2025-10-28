@@ -23,19 +23,7 @@ export default function TabLayout() {
           ),
         }}
       />
-      <Tabs.Screen
-        name='timer' // 경로
-        options={{
-          title: "타이머",
-          tabBarIcon: ({ color, focused }) => (
-            <MaterialCommunityIcons
-              name={focused ? "timer-lock" : "timer-lock-open-outline"}
-              size={24}
-              color={color} // tabBarActiveTintColor 적용
-            />
-          ),
-        }}
-      />
+
       <Tabs.Screen
         name='study' // 경로
         options={{
@@ -59,7 +47,7 @@ export default function TabLayout() {
           title: "컬렉션",
           tabBarIcon: ({ color, focused }) => (
             <MaterialCommunityIcons
-              name={focused ? "egg-easter" : "egg-outline"}
+              name={focused ? "coffee" : "coffee-outline"}
               size={24}
               color={color} // tabBarActiveTintColor 적용
             />
