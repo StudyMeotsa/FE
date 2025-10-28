@@ -32,6 +32,11 @@ export default function StudyLayout() {
           headerBackButtonDisplayMode: "minimal", // 뒤로가기 글자 감추기
         }}
       />
+      <Stack.Screen
+        name='todo'
+        options={{
+          title: "이번주 할 일",
+          headerBackButtonDisplayMode: "minimal", // 뒤로가기 글자 감추기
         }}
       />
     </Stack>
