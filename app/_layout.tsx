@@ -18,6 +18,10 @@ export default function RootLayout() {
           name='(tabs)'
           options={{ headerShown: false }}
         />
+        <Stack.Screen
+          name='timer'
+          options={{ headerShown: false }}
+        />
       </Stack>
     </SafeAreaProvider>
   );

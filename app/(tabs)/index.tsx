@@ -1,13 +1,18 @@
-import { useNavigation } from "@react-navigation/native";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Link } from "expo-router";
+import {
+  Image,
+  Pressable,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Latte from "../../assets/images/Latte.png";
 import Lamp from "../../assets/images/lamp.png";
 import Man from "../../assets/images/man.png";
 
 export default function HomeScreen() {
-  const navigation = useNavigation();
-
   return (
     <SafeAreaView>
       <View style={styles.topBackground}>
@@ -24,13 +29,13 @@ export default function HomeScreen() {
           source={Man}
           style={styles.manIamge}
         />
-
-        <TouchableOpacity
-          style={styles.startButton}
-          onPress={() => alert("START")} // navigation.navigate("위치")
-        >
-          <Text style={styles.startButtonText}>공부 시작하기 →</Text>
-        </TouchableOpacity>
+        <Link
+          href={"/timer"}
+          asChild>
+          <Pressable style={styles.startButton}>
+            <Text style={styles.startButtonText}>공부 시작하기 →</Text>
+          </Pressable>
+        </Link>
       </View>
 
       <Text style={styles.textStudy}>예정된 스터디</Text>

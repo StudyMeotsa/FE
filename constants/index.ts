@@ -10,9 +10,14 @@ export const colors = {
   GRAY_400: "#757575",
   GRAY_500: "#424242", // 가장 진한 회색
 
-  MINT_100: "#F1FFF3", // 가장 밝음
-  MINT_200: "#C3E2C2",
-  MINT_300: "#A4EFD8",
-  MINT_400: "#53BCA2",
-  MINT_500: "#00C897", // 가장 진함
+  BLUE_100: "#B6C9D7",
+  BLUE_200: "#7E9FB2",
+  BLUE_300: "#3F5F76",
+  BLUE_400: "#303A5B",
+
+  BROWN_100: "#EFEAE4",
+  BROWN_200: "#D2C1B7",
+  BROWN_300: "#A57865",
+  BROWN_400: "#794E47",
+  BROWN_500: "#573029",
 };
