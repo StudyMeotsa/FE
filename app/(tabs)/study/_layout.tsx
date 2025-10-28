@@ -4,12 +4,24 @@ export default function StudyLayout() {
   return (
     <Stack
       screenOptions={{
-        headerShown: false,
+        contentStyle: { backgroundColor: colors.WHITE },
+        headerShadowVisible: false,
       }}>
       <Stack.Screen
         name='index'
         options={{
-          headerShown: false,
+          title: "나의 스터디룸",
+          headerRight: () => (
+            <Pressable>
+              <AntDesign
+                name='plus'
+                size={24}
+                color={colors.BLACK}
+              />
+            </Pressable>
+          ),
+        }}
+      />
         }}
       />
     </Stack>
